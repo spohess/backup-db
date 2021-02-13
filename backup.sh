@@ -34,7 +34,7 @@ while read BANCO
 do 
 
 geralog '   Iniciando DUMP da banco de dados '${BANCO}
-mysqldump -u${DUMP_USUARIO} -h${DUMP_LOCAL} --databases ${BANCO} > ${LOCAL_DUMP}/${BANCO}.sql
+mysqldump --skip-tz-utc -u${DUMP_USUARIO} -h${DUMP_LOCAL} --databases ${BANCO} > ${LOCAL_DUMP}/${BANCO}.sql
 geralog '   DUMP da banco de dados '${BANCO}' finalizado'
 
 done < ${ARQ_DBS}
