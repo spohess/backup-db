@@ -1,0 +1,13 @@
+SERIAL=`date '+%d'`
+
+DUMP_USUARIO=
+DUMP_LOCAL=
+
+SCRIPT_AUX=$SCRIPT_HOME/arquivos_aux
+ARQ_DBS=$SCRIPT_AUX/db_completos
+
+DIR_DUMP=backup_dbs_${SERIAL}
+LOCAL_DUMP=$SCRIPT_HOME/$DIR_DUMP
+
+DIR_LOG=$SCRIPT_HOME/logs
+ARQ_LOG=$DIR_LOG/backup_dbs_$SERIAL.log
